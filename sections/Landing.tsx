@@ -1,12 +1,12 @@
 import Footer from '@/components/Footer'
-import Header from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import Navbar from '@/components/Navbar'
 import React from 'react'
 
 function Landing() {
   return (
     <div className='bg-slate-100 min-h-screen'>
-        <Header />
+        <Navbar />
         <Hero />
         <Footer />
     </div>

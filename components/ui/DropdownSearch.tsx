@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { Search, ChevronUp, ChevronDown } from "lucide-react";
+import { FaCaretDown, FaCaretUp, FaSearch } from "react-icons/fa";
 
 export default function DropdownSearch() {
   const cities = [
@@ -47,9 +47,9 @@ export default function DropdownSearch() {
         >
           <span>{selected || "Choose City"}</span>
           {isOpen ? (
-            <ChevronUp size={16} className="text-gray-500" />
+            <FaCaretUp size={13} className="text-gray-500" />
           ) : (
-            <ChevronDown size={16} className="text-gray-500" />
+            <FaCaretDown size={13} className="text-gray-500" />
           )}
         </div>
 
@@ -86,11 +86,11 @@ export default function DropdownSearch() {
       <input
         type="text"
         placeholder="Search"
-        className="text-sm border flex-1 border-r-0 px-2 border-gray-300 outline-blue-300"
+        className="text-sm border flex-1 border-r-0 px-2 w-52 border-gray-300 outline-blue-300"
       />
 
-      <button className="p-2 hover:bg-green-700 text-green-700 hover:text-slate-100 border border-green-700 rounded-md rounded-l-none cursor-pointer">
-        <Search size={20} />
+      <button className="px-3 py-2 hover:bg-green-700 text-green-700 hover:text-slate-100 border border-green-700 rounded-md rounded-l-none cursor-pointer">
+        <FaSearch size={18}/>
       </button>
     </div>
   );
