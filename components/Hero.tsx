@@ -8,6 +8,7 @@ import { FaComment, FaStar as FaStarSolid, FaWhatsapp, FaFacebookF, FaLinkedinIn
 import { FaRegStar as FaStarRegular } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import ReCAPTCHA from "react-google-recaptcha";
+import MainSection from "./MainSection";
 
 function Hero() {
   const [showNumber, setShowNumber] = useState(false);
@@ -23,15 +24,15 @@ function Hero() {
   const sitekey = process.env.NEXT_PUBLIC_SITE_KEY as string
 
   return (
-    <div className="container">
+    <div className="container h-full">
       <div className="flex gap-1 text-[13px] m-2 w-full whitespace-nowrap overflow-x-auto">
         <Link href="#" className="underline text-blue-500">Home</Link> /
         <Link href="#" className="underline text-blue-500">Coaching Institute</Link> /
         <p className="text-slate-600">Tulips IELTS Academy - dehradun</p>
       </div>
 
-      <div className="h-screen bg-gray-50 hidden lg:flex">
-        <div className="flex items-start space-x-4 bg-white shadow-md rounded-lg p-3 min-w-full">
+      <div className=" bg-gray-50 flex flex-col">
+        <div className="hidden lg:flex items-start space-x-4 bg-white rounded-lg p-3 min-w-full">
           <div className="flex-shrink-0 w-44 h-28 overflow-hidden border border-gray-300 p-1 rounded">
             <Image
               src={"/assets/tulips-sm.jpg"}
@@ -109,6 +110,7 @@ function Hero() {
             </div>
           </div>
         </div>
+        <MainSection />
       </div>
 
       {showModal && (
@@ -257,7 +259,6 @@ function Hero() {
           </div>
         </div>
       )}
-
     </div>
   );
 }
