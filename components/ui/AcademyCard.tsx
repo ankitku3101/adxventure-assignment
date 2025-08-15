@@ -162,7 +162,7 @@ const AcademyCard: React.FC<AcademyCardProps> = ({
         </div>
       </div>
 
-      <div className="flex justify-between text-xs">
+      <div className="lg:hidden flex justify-between text-xs">
         <button
             onClick={() => setShowReportModal(true)}
             className="flex items-center text-red-600 gap-1 cursor-pointer"
