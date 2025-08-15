@@ -5,7 +5,8 @@ import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { FaSquareXmark, FaHandPointRight } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
-import TECarouselWrapper from "./ui/Carousel";
+import AcademyCard from "./ui/AcademyCard";
+import Carousel from "./ui/Carousel";
 
 export default function MainSection() {
   const sitekey = process.env.NEXT_PUBLIC_SITE_KEY as string;
@@ -28,7 +29,21 @@ export default function MainSection() {
       
       <div className="lg:w-2/3 w-full space-y-6 h-full">
         
-        <TECarouselWrapper />
+        <Carousel />
+
+        <AcademyCard
+          name="Tulips IELTS Academy - dehradun"
+          location="Dehradun/Uttarakhand"
+          fullAddress="Police Headquarters and Uttarakhand Secre..."
+          mapUrl="https://www.google.com/maps?daddr=Tulips+IELTS+Academy++-+dehradun+Dehradun"
+          rating={4.0}
+          reviewCount={1}
+          phoneNumber="7055859684"
+          views={666}
+          isVerified={true}
+          shareUrl="https://www.addressguru.in/tulips-ielts-academy-dehradun"
+          siteKey={process.env.NEXT_PUBLIC_SITE_KEY}
+        />
 
         <section>
           <h2 className="text-xl font-bold mb-2">About Us</h2>
@@ -38,28 +53,26 @@ export default function MainSection() {
         </section>
 
         <section className="space-y-6">
-          {/* Courses */}
           <div>
             <h2 className="text-xl font-bold mb-1">Courses</h2>
             <hr className="my-2 text-gray-300" />
             <p className="text-sm mb-2">
               Tulips IELTS Academy - dehradun provides the following courses:
             </p>
-            <div className="grid grid-cols-2 gap-y-1 text-sm">
+            <div className="grid lg:grid-cols-2 gap-y-1 text-sm">
               <p>✓ IELTS Coaching</p>
               <p>✓ PTE Coaching</p>
               <p>✓ TOEFL</p>
             </div>
           </div>
 
-          {/* Facilities */}
           <div>
             <h2 className="text-xl font-bold mb-1">Facilities</h2>
             <hr className="my-2 text-gray-300" />
             <p className="text-sm mb-2">
               Tulips IELTS Academy - dehradun provides the following facilities:
             </p>
-            <div className="grid grid-cols-2 gap-y-1 text-sm">
+            <div className="grid lg:grid-cols-2 gap-y-1 text-sm">
               <p>✓ Wifi</p>
               <p>✓ 24 Hr Electricity</p>
               <p>✓ Water Purifier</p>
@@ -67,22 +80,20 @@ export default function MainSection() {
             </div>
           </div>
 
-          {/* Payment Modes */}
           <div>
             <h2 className="text-xl font-bold mb-1">Payment Modes</h2>
             <hr className="my-2 text-gray-300" />
             <p className="text-sm mb-2">
               Tulips IELTS Academy - dehradun provides the following payment modes:
             </p>
-            <div className="grid grid-cols-2 gap-y-1 text-sm">
+            <div className="grid lg:grid-cols-2 gap-y-1 text-sm">
               <p>✓ Cash</p>
               <p>✓ Debit/Credit Card</p>
               <p>✓ Net Banking</p>
             </div>
           </div>
 
-          {/* State & City */}
-          <div className="grid grid-cols-2 gap-y-1 gap-x-4">
+          <div className="grid lg:grid-cols-2 gap-y-1 gap-x-4">
             <div>
               <h2 className="text-xl font-bold mb-1">State</h2>
               <hr className="my-2 text-gray-300" />
@@ -97,7 +108,7 @@ export default function MainSection() {
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold mb-1">
+          <h2 className="text-xl lg:text-3xl font-bold mb-1">
             Overview - Tulips IELTS Academy - dehradun
           </h2>
           <hr className="my-3 text-gray-300" />
@@ -121,7 +132,7 @@ export default function MainSection() {
 
       <div className="lg:w-1/3 w-full space-y-6">
         
-        <div className="flex flex-col">
+        <div className="hidden lg:flex flex-col ">
           <div className="bg-gray-200/60 p-7 rounded shadow">
             <h3 className="font-bold text-xl mb-2 border-b border-b-gray-300 pb-2">Quick Information</h3>
             <p className="border-b border-b-gray-300 pb-2 mb-2"><strong>Category:</strong> Coaching Institute</p>
@@ -145,11 +156,11 @@ export default function MainSection() {
           </div>
         </div>
 
-        <div className="w-full h-96 relative rounded overflow-hidden">
+        <div className="hidden lg:block w-full h-96 relative rounded overflow-hidden">
           <Image src="/assets/ad_dsom.jpg" alt="Ad Banner" fill className="object-fit" />
         </div>
 
-        <div className="bg-cyan-50/60 p-4 rounded shadow">
+        <div className="bg-cyan-50/60 p-4 rounded shadow hidden lg:block">
           <h3 className="font-semibold">Get More Information From</h3>
           <h3 className="font-semibold mb-3 text-xl">Tulips IELTS Academy - dehradun</h3>
           <form className="space-y-2 p-2 flex flex-col items-center">
@@ -164,7 +175,7 @@ export default function MainSection() {
           </form>
         </div>
 
-        <div className="p-6 rounded shadow text-2xl">
+        <div className="hidden lg:block p-6 rounded shadow text-2xl">
           <h3 className="font-bold mb-2 border-b border-b-gray-300 pb-2">Useful Information</h3>
           <ul className="list-decimal text-base text-gray-700 px-6 mb-2">
             <li>Avoid any scams while paying in advance.</li>

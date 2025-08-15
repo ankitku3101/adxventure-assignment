@@ -5,29 +5,12 @@
 
 @layer components {
   .container {
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 4px;
-    padding-right: 4px;
+    @apply mx-auto px-1;
   }
 
   @media (min-width: 1200px) {
     .container {
-      padding-left: 80px;
-      padding-right: 80px;
-    }
-  }
-
-  @media (min-width: 375px) {
-    .container {
-      max-width: 375px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
+      @apply px-20;
     }
   }
 }

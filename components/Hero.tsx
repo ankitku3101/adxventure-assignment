@@ -24,7 +24,7 @@ function Hero() {
   const sitekey = process.env.NEXT_PUBLIC_SITE_KEY as string
 
   return (
-    <div className="container h-full">
+    <div className="container h-full mb-12">
       <div className="flex gap-1 text-[13px] m-2 w-full whitespace-nowrap overflow-x-auto">
         <Link href="#" className="underline text-blue-500">Home</Link> /
         <Link href="#" className="underline text-blue-500">Coaching Institute</Link> /

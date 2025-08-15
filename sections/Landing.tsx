@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer'
+import FooterBanner from '@/components/FooterBanner'
 import Hero from '@/components/Hero'
 import Main from '@/components/MainSection'
 import Navbar from '@/components/Navbar'
@@ -9,8 +10,8 @@ function Landing() {
     <div className='bg-slate-100 min-h-screen overflow-x-clip'>
         <Navbar />
         <Hero />
-        {/* <Main /> */}
         <Footer />
+        <FooterBanner />
     </div>
   )
 }
